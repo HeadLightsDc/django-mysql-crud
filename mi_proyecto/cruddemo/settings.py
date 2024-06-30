@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'cruddemo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_ecom_stock',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'db',  # This should match the service name in docker-compose.yml
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
