@@ -18,7 +18,7 @@ services:
      dockerfile: Dockerfile
     container_name: web_django_taller_de_programacion
     working_dir: /opt/back_end/mi_proyecto/
-    command: >
+    #command: >
       /bin/sh -c "/opt/back_end/mi_proyecto/wait-for-it.sh db:3306 -- python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     #healthcheck:
      # test: /bin/sh -c "cd /opt/back_end && chmod +x healthcheck.sh && ./healthcheck.sh"
